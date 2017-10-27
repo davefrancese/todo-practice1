@@ -1,0 +1,25 @@
+{
+  "name": "practice1",
+  "version": "1.0.0",
+  "description": "#### make a new directory #### set up on gitHub (git init, etc.) #### get express running * npm init (this sets up your json file) * npm install --save express hbs knex pg",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davefrancese/todo-practice1.git"
+  },
+  "author": "dave francese",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davefrancese/todo-practice1/issues"
+  },
+  "homepage": "https://github.com/davefrancese/todo-practice1#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "hbs": "^4.0.1",
+    "knex": "^0.13.0",
+    "pg": "^7.3.0"
+  }
+}
