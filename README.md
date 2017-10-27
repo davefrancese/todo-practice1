@@ -111,7 +111,51 @@ exports.seed = function(knex, Promise) {
 * to see of your database run - \dt
 * to see your table run - select * from name_of_table
 
+#### Create a route
+* mkdir routes in main directory
+* touch index.js
+* in index.js
+``` javascript
+const express = require('express');
+const router = express.Router();
 
+router.get('/', (req,res) => {
+  res.render('index', {
+    title: 'tite_of_your_page'
+  })
+})
+
+module.exports = router;
+```
+* to use this route we must require it and use it in app.js
+``` javascript
+const routes = require('./routes/index')
+
+//to use routes
+app.use('/', routes)
+```
+* in your handlebars page - index.hbs
+``` html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{title}}</title>
+  </head>
+  <body>
+    <h1>Welcome to {{title}}</h1>
+  </body>
+</html>
+```
+
+
+
+
+start at 10:15
+
+
+
+left off 17:00
 
 
 
