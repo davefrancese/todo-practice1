@@ -9,5 +9,10 @@
 * in your new .gitignore file, type node_modules and save to hide from github
 #### add app.js file to main directory
 * this is the hub of your app
-* in app.js const express = require('express') & const app = express() & const port = 3000
+* in app.js
+``` javascript
+const express = require('express');
+const app = express()
+const port = 3000
+```
 - express should now be running
