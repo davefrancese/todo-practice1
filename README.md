@@ -57,7 +57,15 @@ app.listen(port, () => {
 })
 ```
 
-#### Knex - setting up a database
+#### Knex - creating a database
+* in terminal run knex init - this adds a knexfile.js in the main directory
+* in knexfile.js, under development, client:'pg' - this initiates postgres as client
+* under development, connection: { host: 'localhost', database: 'name_of_your_database'}
+* in terminal create the database - createdb name_of_your_database
+
+#### Migrate the database with Tables
+
+
 
 
 
