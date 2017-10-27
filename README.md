@@ -12,7 +12,14 @@
 * in app.js
 ``` javascript
 const express = require('express');
-const app = express()
-const port = 3000
+const app = express();
+const port = 3000;
+
+app.listen(port, () => {
+  console.log('listening on port', port);
+})
 ```
 - express should now be running
+- in CLI run nodemon
+- CLI should respond with "listening on port 3000"
+- in a new browser tab url - http://localhost:3000/
