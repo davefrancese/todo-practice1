@@ -33,12 +33,16 @@ app.listen(port, () => {
 app.set('view engine', 'hbs');
 ```
 * render index.hbs in the browser (assuming you put some html content in index.hbs)
-* above app.listen -
+* in app.js above app.listen -
 ``` javascript
 app.get('/', (req,res) => {
   res.render('index')
 })
 ```
+* Handlebars (hbs) is now running
+
+#### Knex - setting up a database
+
 
 
 
