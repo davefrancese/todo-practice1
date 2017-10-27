@@ -89,7 +89,27 @@ exports.down = function(knex, Promise) {
 * in terminal run - knex migrate:latest
 * **note** if changes are made to this file run - knex migrate:rollback and then knex migrate:latest again to get changes made.
 
-
+#### Seed the table with data
+* in the terminal run - knex seed:make name_of_table
+* find seed folder in main directory and open seed file
+``` javascript
+exports.seed = function(knex, Promise) {
+  // Deletes ALL existing entries
+  return knex('table_name').del()
+    .then(function () {
+      // Inserts seed entries
+      return knex('table_name').insert([
+        {id: 1, colName: 'rowValue1'},
+        {id: 2, colName: 'rowValue2'},
+        {id: 3, colName: 'rowValue3'}
+      ]);
+    });
+};
+```
+* in terminal run - knex seed:run
+* check database in terminal, run - psql name_of_your_database
+* to see of your database run - \dt
+* to see your table run - select * from name_of_table
 
 
 
