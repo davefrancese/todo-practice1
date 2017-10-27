@@ -64,6 +64,30 @@ app.listen(port, () => {
 * in terminal create the database - createdb name_of_your_database
 
 #### Migrate the database with Tables
+* for each table you want in your database do the following
+* in terminal - knex migrate:make name_of_table
+* find new migrations folder in main directory. open file to find exports.up / exports.down
+``` javascript
+exports.up = function(knex, Promise) {
+  return Promise.all([
+    knex.schema.createTable('name_of_table', (table) => {
+      table.increments() // column 1: the table id's (mandatory)
+      table.string('column_name') // ex. column 2
+      table.text('column_name') // ex. column 3 ...etc
+      table.integer('column_name')
+      table.boolean('column_name')
+    })
+  ])
+};
+
+exports.down = function(knex, Promise) {
+  return Promise.all([
+    knex.schema.dropTable('name_of_table')
+  ])
+};
+```
+* in terminal run - knex migrate:latest
+* **note** if changes are made to this file run - knex migrate:rollback and then knex migrate:latest again to get changes made.
 
 
 
