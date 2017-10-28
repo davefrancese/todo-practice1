@@ -148,9 +148,23 @@ app.use('/', routes)
 </html>
 ```
 
+#### Connect Database with Knex
+* in the main directory mkdir db
+* touch knex.js
+* in knex.js
+``` javascript
+const environment = process.env.NODE_ENV || 'development';
+const config = require('../knexfile')[environment]
+
+module.exports = require('knex')(config)
+```
+* use this connection in your index.js
+``` javascript
+const knex = require('../db/knex')
+```
 
 
-
+on 22:10
 start at 10:15
 
 

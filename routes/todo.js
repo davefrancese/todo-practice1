@@ -3,8 +3,11 @@ const router = express.Router();
 const knex = require('../db/knex')
 
 router.get('/', (req,res,next) => {
-  res.render('index', {
-    title: 'TODO'
+  knex('todo').select()
+  .then(todos => {
+    res.render('all', {
+      todos: todos
+    })
   })
 })
 
