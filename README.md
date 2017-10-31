@@ -164,12 +164,9 @@ const knex = require('../db/knex')
 ```
 
 
-on 22:10
-start at 10:15
 
-
-
-left off 17:00
+[Video Reference](https://www.youtube.com/watch?v=WYa47JkZH_U)
+left off at 17:00
 
 
 
