@@ -166,7 +166,8 @@ const knex = require('../db/knex')
 
 
 [Video Reference](https://www.youtube.com/watch?v=WYa47JkZH_U)
-left off at 17:00
+
+* left off at 17:00
 
 
 
