@@ -1,13 +1,11 @@
 const express = require('express');
 const path = require('path')
-//const logger = require('morgan')
-//const cookieParser = require('cookie-parser')
 const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
 
 const routes = require('./routes/index')
 const todo = require('./routes/todo')
-const queries = require('./db/queries')
+
 
 const app = express();
 const port = process.env.PORT || 3000;
