@@ -75,27 +75,6 @@ router.post('/', (req,res) => {
       res.redirect(`/todo/${id}`)
     })
   })
-  // if (validTodo(req.body)) {
-  //   const todo = {
-  //     title: req.body.title,
-  //     description: req.body.description,
-  //     priority: req.body.priority,
-  //     date: new Date()
-  //   }
-  //   // insert into the database
-  //   knex(todo)
-  //     .insert(todo, 'id')
-  //     .then(ids => {
-  //       const id = ids[0];
-  //       res.redirect(`/todo/${id}`)
-  //     })
-  // } else {
-  //   //respond with an error
-  //   res.status(500)
-  //   res.render('error', {
-  //     message: 'Invalid todo'
-  //   })
-  // }
 })
 
 router.put('/:id', (req,res) => {

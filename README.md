@@ -158,10 +158,12 @@ const config = require('../knexfile')[environment]
 
 module.exports = require('knex')(config)
 ```
-* use this connection in your index.js
-``` javascript
-const knex = require('../db/knex')
-```
+* The code above tells knex how to find the database so we can now use knex commands instead of SQL commands. It does more than that but we won't dive into that in this tutorial.
+
+* [NOTE] In this repo I did not set up a separate query folder, however I find it to be best practice. I will walk you through this process below.
+
+#### Queries
+* In the db folder create a new file called "queries"
 
 
 
