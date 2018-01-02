@@ -164,12 +164,38 @@ module.exports = require('knex')(config)
 
 #### Queries
 * In the db folder create a new file called "queries"
+* On the top of this file all we need is:
+``` javascript
+const knex = require('./knex')
+```
+* This is so we can actually use knex in our queries. A simple query may look something like this:
+``` javascript
+let getResolutions = () => {
+  return knex('resolutions').select()
+}
+```
+* [NOTE] you will have to export these functions out, so that any of your other files can use them. At very bottom of your query file simply add:
+``` javascript
+module.exports = {
+  functionName1,
+  functionName2,
+  etc...
+}
+```
+* To use these queries we can go back to our routes page and add these in like this:
+``` javascript
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  queries.functionName1() // here we call the function
+  .then(data => {
+    res.render('index', data); // here we render our handlebars page with data as a variable of anything that maybe returned from our query
+  })
+});
+```
 
+* Now all we need to do is add the rest of the queries and routes using Get, Put, Update, Delete so that we have a full CRUD App!
 
-
-[Video Reference](https://www.youtube.com/watch?v=WYa47JkZH_U)
-
-* left off at 17:00
+* Good Luck and Happy Coding!
 
 
 
